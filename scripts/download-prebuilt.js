@@ -16,8 +16,8 @@ function main(exit) {
   }
 
   if (process.env.TARGET_PLATFORM) {
-    args.push('--target_platform=' + process.env.TARGET_PLATFORM);
   }
+  args.push('--target_platform=win32');
 
   let { status } = spawnSync('node-pre-gyp', args, {
     shell: true,
